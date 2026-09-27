@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- Source of profile/hourglass-{light,dark}.png. Chrome blocks web fonts over
+     file://, so serve the directory that holds both this clone and a clone of
+     the website repository (python3 -m http.server), then open
+     /.github/assets/hourglass.html?theme=light (or dark) with a 920x280
+     viewport at device scale factor 2 and screenshot the viewport. -->
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../website/assets/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; }
+  svg { display: block; width: 100vw; height: auto; }
+  .light { --bg:#f6f3ec; --lbl:#6b7683; --lbl2:#3f4b58; --node:#ffffff; --node-stroke:rgba(18,32,47,.42); --engine:#ece8de; --text:#12202f; --waist:#0d2757; --waist-stroke:#d39a1d; --waist-text:#f6f3ec; --waist-sub:#f6e6bd; --in:#17418e; --out:#a9770c; --sand:#d39a1d; }
+  .dark  { --bg:#0f1a2b; --lbl:#7d92ad; --lbl2:#b8c3d1; --node:#172641; --node-stroke:rgba(233,228,216,.30); --engine:#1f2b3d; --text:#e9e4d8; --waist:#0d2757; --waist-stroke:#d39a1d; --waist-text:#f6f3ec; --waist-sub:#f6e6bd; --in:#8fc1ff; --out:#d39a1d; --sand:#f2c462; }
+  .bg { fill: var(--bg); }
+  text { font-family: "Fragment Mono", ui-monospace, monospace; font-size: 12px; fill: var(--text); letter-spacing: .02em; }
+  .long { font-size: 11px; }
+  .lbl { font-size: 10.5px; fill: var(--lbl); letter-spacing: .12em; text-transform: uppercase; }
+  .lbl2 { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 15px; fill: var(--lbl2); letter-spacing: 0; }
+  .node { fill: var(--node); stroke: var(--node-stroke); stroke-width: 1; }
+  .engine { fill: var(--engine); }
+  .waist { fill: var(--waist); stroke: var(--waist-stroke); stroke-width: 1.5; }
+  .waist-text { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 28px; fill: var(--waist-text); letter-spacing: 0; }
+  .waist-sub { font-size: 9px; fill: var(--waist-sub); letter-spacing: .12em; text-transform: uppercase; }
+  .path { fill: none; stroke: var(--in); stroke-width: 1.5; stroke-linecap: round; }
+  .out { stroke: var(--out); }
+  .sand { fill: var(--sand); }
+</style></head>
+<body>
+<svg id="banner" viewBox="0 0 920 280" xmlns="http://www.w3.org/2000/svg">
+  <rect class="bg" width="920" height="280"/>
+  <text class="lbl"  x="130" y="34" text-anchor="middle">source languages</text>
+  <text class="lbl2" x="130" y="53" text-anchor="middle">characteristica</text>
+  <text class="lbl"  x="790" y="34" text-anchor="middle">executors</text>
+  <text class="lbl2" x="790" y="53" text-anchor="middle">calculus ratiocinator</text>
+
+  <path class="path" d="M 220 98 C 285 98, 265 164, 330 164"/>
+  <path class="path" d="M 220 164 L 330 164"/>
+  <path class="path" d="M 220 230 C 285 230, 265 164, 330 164"/>
+  <path class="path out" d="M 590 164 C 655 164, 635 98, 700 98"/>
+  <path class="path out" d="M 590 164 L 700 164"/>
+  <path class="path out" d="M 590 164 C 655 164, 635 230, 700 230"/>
+
+  <rect class="node" x="40" y="76"  width="180" height="44" rx="3"/><text x="130" y="102" text-anchor="middle">RegelSpraak</text>
+  <rect class="node" x="40" y="142" width="180" height="44" rx="3"/><text x="130" y="168" text-anchor="middle">Catala</text>
+  <rect class="node" x="40" y="208" width="180" height="44" rx="3"/><text x="130" y="234" text-anchor="middle">F-logic</text>
+
+  <rect class="waist" x="330" y="124" width="260" height="80" rx="4"/>
+  <text class="waist-text" x="460" y="164" text-anchor="middle">uchar IR</text>
+  <text class="waist-sub"  x="460" y="188" text-anchor="middle">spec · schema · verifier · corpus</text>
+  <circle class="sand" cx="322" cy="164" r="3.2"/>
+
+  <rect class="node engine" x="700" y="76"  width="180" height="44" rx="3"/><text x="790" y="102" text-anchor="middle">Drools</text>
+  <rect class="node engine" x="700" y="142" width="180" height="44" rx="3"/><text x="790" y="168" text-anchor="middle">Clingo (ASP)</text>
+  <rect class="node engine" x="700" y="208" width="180" height="44" rx="3"/><text class="long" x="790" y="234" text-anchor="middle">reference interpreter</text>
+</svg>
+<script>
+  document.getElementById('banner').classList.add(new URLSearchParams(location.search).get('theme') || 'light');
+</script>
+</body></html>
