@@ -43,7 +43,7 @@ and with a reason.
 | `research` | Research reports and assessments written alongside the work |
 
 The repositories `uchar` and `regelspraak-toolchain` have been public since 12 October 2026; `website` and `research`
-are private. The website is the public description of the project ([status](https://uchar.dev/?lang=en#status)).
+are private. The website is the public description of the project ([uchar.dev](https://uchar.dev/?lang=en)).
 
 ### Reading on
 
