@@ -42,8 +42,8 @@ and with a reason.
 | `website` | The source of [uchar.dev](https://uchar.dev), static and bilingual |
 | `research` | Research reports and assessments written alongside the work |
 
-The repositories are private for now: publication has been decided but deferred, and until then the website is the
-public description of the project ([status](https://uchar.dev/?lang=en#status)).
+The repositories `uchar` and `regelspraak-toolchain` have been public since 12 October 2026; `website` and `research`
+are private. The website is the public description of the project ([status](https://uchar.dev/?lang=en#status)).
 
 ### Reading on
 
